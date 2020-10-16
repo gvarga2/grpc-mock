@@ -1,5 +1,5 @@
 {
-  "name": "grpc-mock",
+  "name": "@gvarga2/grpc-mock",
   "version": "0.7.0",
   "description": "a simple grpc mock server",
   "main": "index.js",
