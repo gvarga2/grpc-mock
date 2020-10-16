@@ -1,5 +1,4 @@
 # grpc-mock
-[![npm version](https://badge.fury.io/js/grpc-mock.svg)](https://badge.fury.io/js/grpc-mock)
 
 A simple mock gRPC server on Node.js.
 
@@ -12,6 +11,14 @@ const mockServer = createMockServer({
   rules: [
     { method: "hello", input: { message: "test" }, output: { message: "Hello" } },
     { method: "goodbye", input: ".*", output: { message: "Goodbye" } },
+	
+	{
+		method: "hello",
+		input: (input) => {
+			return input == '{ "message": "foobar" }';
+		},
+		output: { message: "barfoo" }
+	},
     
     {
       method: "howAreYou",
@@ -101,5 +108,5 @@ message ResponseGreet {
 #### Chunk
 |prop name|type|required/optional|description|
 |:-------|:---|:----------------|:----------|
-|**`input`**|Object\|String|Required when `streamType` is `client`. Optional when `streamType` is `mutual`|Specifying an expected input. Raw object or pattern string(RegExp) is available.|
+|**`input`**|Object\|String|Required when `streamType` is `client`. Optional when `streamType` is `mutual`|Specifying an expected input. Raw object, pattern string(RegExp) or function is available.|
 |**`output`**|Object|Required when `streamType` is `server`. Optional when `streamType` is `mutual`|Specifying an output to an expected input|

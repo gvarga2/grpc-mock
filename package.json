@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YoshiyukiKato/grpc-mock.git"
+    "url": "git+https://github.com/gvarga2/grpc-mock.git"
   },
   "keywords": [
     "grpc",
     "mock"
   ],
-  "author": "YoshiyukiKato",
+  "author": "Gábor Varga",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/YoshiyukiKato/grpc-mock/issues"
+    "url": "https://github.com/gvarga2/grpc-mock/issues"
   },
-  "homepage": "https://github.com/YoshiyukiKato/grpc-mock#readme",
+  "homepage": "https://github.com/gvarga2/grpc-mock#readme",
   "dependencies": {
     "@grpc/proto-loader": "^0.3.0",
     "grpc": "^1.17.0",
