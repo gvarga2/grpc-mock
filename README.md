@@ -12,13 +12,13 @@ const mockServer = createMockServer({
     { method: "hello", input: { message: "test" }, output: { message: "Hello" } },
     { method: "goodbye", input: ".*", output: { message: "Goodbye" } },
 	
-	{
-		method: "hello",
-		input: (input) => {
-			return input == '{ "message": "foobar" }';
-		},
-		output: { message: "barfoo" }
-	},
+    {
+      method: "hello",
+      input: (input) => {
+        return input == '{ "message": "foobar" }';
+      },
+      output: { message: "barfoo" }
+    },
     
     {
       method: "howAreYou",
